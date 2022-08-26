@@ -1,0 +1,40 @@
+.loader {
+  background-color: #fff;
+  overflow: hidden;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  z-index: 10;
+
+  &__element {
+    height: 10px;
+    width: 100%;
+
+    &:before {
+      content: '';
+      display: block;
+      background-color: $color-purple-grey;
+      height: 10px;
+      width: 0;
+      animation: loading 9s ease-in;
+    }
+  }
+}
+
+@keyframes loading {
+  10% {
+    width: 50%;
+  }
+  20% {
+    width: 99.99%;
+  }
+  100% {
+    width: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+.popup__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup {
+  @include flex($direction: column);
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  top: calc(50% - 200px);
+  left: calc(50% - 250px);
+
+  > svg {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    &:hover {
+      fill: $color-blue;
+    }
+  }
+
+  > span {
+    line-height: 2.5rem;
+  }
+}
